@@ -1,0 +1,60 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+#logo
+{
+	margin-bottom:30px;
+	float:left;
+	width:180px;
+	height:180px;
+}
+#a
+{
+	float:right;
+	margin-left:700px;
+
+}
+.b
+{
+	font-family:arial;
+	font-size:15px;
+	margin-right:30px;
+	color: black;
+	font-style:italic;
+}
+.b:hover
+{
+	font-family:red serif;
+	font-size:15px;
+	margin-right:30px;
+	color: black;
+	font-style:italic;
+	transition: 3;
+	color: saddlebrown;
+}
+#form{
+	
+	background-color:#BC8F8F;
+	padding:2px;
+	margin:2px;
+	text-align:center;
+}
+#form button{
+	color: floralwhite;
+	background-color: royalblue;
+	width: 80px;
+	height: 40px;
+}
+#form input{
+	background-color: lavender;
+}
+#p{
+	text-align:center;
+	font-family:Algerian;
+	font-size:30px;
+}
+#i1
+{
+	background-color:#BC8F8F;
+}

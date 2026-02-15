@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.HotelBooking.com</title>
+	<link rel="stylesheet" type="text/css" href="ContactUs.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>
+		var i=0;
+		var images =[];
+		var time = 3000;
+
+		//image list
+		images[0]='f.jpg';
+		images[1]='event.jpg';
+		images[2]='deluxe6.jpg';
+		images[3]='standard5.jpg';
+		
+		//change image
+		function changeImg(){
+			document.slide.src =images[i];
+
+			if (i < images.length -1) {
+				i++
+			} 
+			else {
+				i = 0;
+			}
+
+			setTimeout("changeImg()",time);
+		}
+
+		window.onload = changeImg;
+
+	</script>
+</head>
+<body style="background-color: lavender;">
+	<header id="header">
+	<a class="a" href="homepage.html"><u><b/>Home</u></a>	
+	<a class="a" href="Booking.html"><u>Book Room</u></a>	
+	<a class="a" href="Overview.html"><u>Overview </u></a>
+	<a class="a" href="ContactUs.html"><u>Contact Us</u></a></header>
+
+	<div class="div1">
+		<div class="div2">
+		<h4>C O N T A C T</h4>
+		<h1>Get in touch with us</h1>
+		</div>
+	</div>
+
+<div class="div3">
+	<div class="div4"> 
+		<img class="img" src="contact.jpeg">
+	</div>	
+	<div class="div4">
+		<h4>C O N T A C T</h4><hr>
+		<h1>Hotel Serviced Apartments</h1>
+		<p>Our dedicated team is glad to help you. Contact us by filling in the contact form at the bottom of the page. We will get back to you as soon as possible. Prefer direct contact? We understand! Find our contact details below.</p>
+	</div>
+</div>
+
+<div class="div5">
+	<i class="fa fa-phone" aria-hidden="true"></i>
+	<div class="div4">
+		<h4>C A L L  US</h4>
+		<p><u>+92 315 3527634</u></p>
+	</div>
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+	<div class="div4">
+		<h4>M A I L  US</h4>
+		<p><u>Neerajramrakhia43@gmail.com</u></p>
+	</div>
+</div>
+
+<div class="div3">	
+	<div class="div4">
+		<h4>A M S T E L V E E N</h4><hr>
+		<h1>Hotel Serviced Apartments</h1>
+		<p>Laan van de Helende Meesters 421<br><br>1186 AL Amstelveen.</p>
+	</div>
+	<div class="div4"> 
+		<img class="img" name="slide">
+	</div>
+</div>
+</body>
+</html>

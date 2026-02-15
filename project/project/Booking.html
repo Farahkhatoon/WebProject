@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.HotelBooking.com</title>
+	<link rel="stylesheet" type="text/css" href="Booking.css">
+</head>
+
+<body>
+
+<script>
+	function standard() {
+		var x = document.getElementById('Rooms').value;
+		if (x === "") {
+			alert("Please enter number of rooms");
+			return;
+		}
+		document.getElementById('answer').innerHTML =
+			"Price of Standard Room := " + (1000 * x);
+	}
+
+	function Deluxe() {
+		var x = document.getElementById('Rooms').value;
+		if (x === "") {
+			alert("Please enter number of rooms");
+			return;
+		}
+		document.getElementById('answer').innerHTML =
+			"Price of Deluxe Room := " + (2000 * x);
+	}
+
+	function confirmBooking() {
+		var inputs = document.querySelectorAll("input");
+		
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].type !== "button" && inputs[i].type !== "submit") {
+				if (inputs[i].value === "") {
+					alert("Please fill all required fields!");
+					return;
+				}
+			}
+		}
+
+		if (document.getElementById("answer").innerHTML === "") {
+			alert("Please select room type (Standard or Deluxe)");
+			return;
+		}
+
+		alert("✅ Booking Confirmed!\nThank you for booking with us.");
+	}
+</script>
+
+<div id="i1">
+
+<header>
+	<img id="logo" src="logo.jpg"/>
+	<div id="a">
+		<a class="b" href="homepage.html"><u>Home</u></a>	
+		<a class="b" href="Booking.html"><u>Book Room</u></a>	
+		<a class="b" href="Overview.html"><u>Overview</u></a>
+		<a class="b" href="ContactUs.html"><u>Contact Us</u></a>
+	</div>
+</header>
+
+<br><br><br><br><br><br>
+
+<fieldset>
+<div id="form">
+
+<p id="p"><b>Reservation Details</b></p>
+
+First Name*<br>
+<input type="text"><br><br>
+
+Last Name*<br>
+<input type="text"><br><br>
+
+Address*<br>
+<input type="text"><br><br>
+
+City*<br>
+<input type="text"><br><br>
+
+Phone*<br>
+<input type="tel"><br><br>
+
+Email Address*<br>
+<input type="email"><br><br>
+
+Check-in Date* 
+<input type="date">
+Check-in Time*
+<input type="time"><br><br>
+
+Check-out Date*
+<input type="date">
+Check-out Time*
+<input type="time"><br><br>
+
+Adults*<br>
+<input type="number"><br><br>
+
+Children*<br>
+<input type="number"><br><br>
+
+How many Rooms you want to book:*<br>
+<input type="number" id="Rooms"><br><br>
+
+Room Preference*<br><br>
+
+<input type="button" value="Standard" onclick="standard()">
+<input type="button" value="Deluxe" onclick="Deluxe()">
+
+<p id="answer"></p>
+
+<br><br>
+
+<button type="button" onclick="confirmBooking()">BOOK</button>
+
+</div>
+</fieldset>
+
+</div>
+
+</body>
+</html>
